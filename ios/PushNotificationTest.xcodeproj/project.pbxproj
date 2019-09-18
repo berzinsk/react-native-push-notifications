@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PushNotificationTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PushNotificationTestTests.m */; };
 		0202B24C032252B10F74E2AE /* libPods-PushNotificationTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F13727DBC4B2343F659EAE5 /* libPods-PushNotificationTest.a */; };
+		12EF3EB32332517200579836 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12EF3EB22332517200579836 /* GoogleService-Info.plist */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -46,6 +47,8 @@
 		00E356F21AD99517003FC87E /* PushNotificationTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushNotificationTestTests.m; sourceTree = "<group>"; };
 		098CB7638B17915961DA59E1 /* Pods-PushNotificationTest-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotificationTest-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-PushNotificationTest-tvOS/Pods-PushNotificationTest-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		0F13727DBC4B2343F659EAE5 /* libPods-PushNotificationTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PushNotificationTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12D6A7612332410D009B18AD /* PushNotificationTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = PushNotificationTest.entitlements; path = PushNotificationTest/PushNotificationTest.entitlements; sourceTree = "<group>"; };
+		12EF3EB22332517200579836 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PushNotificationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushNotificationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PushNotificationTest/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PushNotificationTest/AppDelegate.m; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 		13B07FAE1A68108700A75B9A /* PushNotificationTest */ = {
 			isa = PBXGroup;
 			children = (
+				12EF3EB22332517200579836 /* GoogleService-Info.plist */,
+				12D6A7612332410D009B18AD /* PushNotificationTest.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -194,7 +199,6 @@
 				A333AF9933DBEF17199F3346 /* Pods-PushNotificationTestTests.debug.xcconfig */,
 				16827BEF5CC8FECC5959AFFF /* Pods-PushNotificationTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -292,6 +296,17 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = DX3TWD8RW8;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -308,6 +323,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -338,6 +354,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				12EF3EB32332517200579836 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,8 +643,10 @@
 			baseConfigurationReference = CDD16F21B6B94E351151070E /* Pods-PushNotificationTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushNotificationTest/PushNotificationTest.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = DX3TWD8RW8;
 				INFOPLIST_FILE = PushNotificationTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -635,7 +654,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = me.karlis.PushNotificationTest;
 				PRODUCT_NAME = PushNotificationTest;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -646,7 +665,9 @@
 			baseConfigurationReference = A180F929E56C8C8E4D7573C6 /* Pods-PushNotificationTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushNotificationTest/PushNotificationTest.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DX3TWD8RW8;
 				INFOPLIST_FILE = PushNotificationTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -654,7 +675,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = me.karlis.PushNotificationTest;
 				PRODUCT_NAME = PushNotificationTest;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
