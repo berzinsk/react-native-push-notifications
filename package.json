@@ -5,7 +5,8 @@
   "scripts": {
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "rn:reset-cache": "react-native start -- --reset-cache"
   },
   "dependencies": {
     "react": "16.8.6",
